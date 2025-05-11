@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# San Francisco Food Demand Simulation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Goal
 
-## Available Scripts
+The goal of this project is to simulate food delivery demand across San Francisco neighborhoods, analyze spatial demand patterns, and suggest optimal supply store (or delivery hub) placements using data-driven clustering techniques.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Dynamic Demand Simulation:**  
+  Simulates food order demand across a grid representing San Francisco, with realistic neighborhood effects, time-of-day meal peaks, and random events.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Interactive Visualization:**  
+  Visualizes demand intensity on a grid, with color gradients indicating low to high demand.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Demand Analysis:**  
+  Identifies and lists high-demand and low-demand grid cells after simulation.
 
-### `npm test`
+- **K-Means Clustering:**  
+  Performs K-Means clustering on high-demand cells to suggest optimal locations for supply stores or delivery hubs.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Modern UI:**  
+  Clean, responsive interface with dark mode and gradient backgrounds.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Run the Simulation:**  
+   Start and stop the simulation to generate demand data.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Analyze Demand:**  
+   After simulation, analyze demand patterns to see high and low demand areas.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Cluster Analysis:**  
+   Use K-Means clustering to find optimal supply store locations based on high-demand clusters.
 
-### `npm run eject`
+## Technologies
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- Custom CSS (no Tailwind)
+- K-Means clustering (`ml-kmeans`)
+- React Router
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm start
+   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- `src/App.js` - Main simulation and visualization
+- `src/ResultsPage.js` - Demand analysis results
+- `src/KMeansAnalysis.js` - K-Means clustering and store suggestions
+- `src/StoreAnalysis.js` - (Optional) Store recommendation summary
+- `src/index.css` - Custom CSS styles
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
